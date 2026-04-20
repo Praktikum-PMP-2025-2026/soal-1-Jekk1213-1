@@ -64,7 +64,7 @@ int main() {
     }
 
     // Tampilkan hasil RECOVERED
-    printf("RECOVERED ");
+    printf("RECOVERED");
     for (int i=0; i<n; i++) {
         printf("%d ", recov[i]);
     }
