@@ -64,7 +64,7 @@ int main() {
     }
 
     // Tampilkan hasil RECOVERED
-    printf("RECOVERED \n");
+    printf("RECOVERED ");
     for (int i=0; i<n; i++) {
         printf("%d ", recov[i]);
     }
@@ -86,7 +86,7 @@ int main() {
                 sumMax=sumBaru;
             }
         }
-        printf("\nMAX_SUM %d\n", sumMax);
+        printf("\nMAX_SUM %d ", sumMax);
     }
     return 0;
 }
