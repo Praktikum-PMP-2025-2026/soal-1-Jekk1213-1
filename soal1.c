@@ -66,7 +66,7 @@ int main() {
     // Tampilkan hasil RECOVERED
     printf("RECOVERED ");
     for (int i=0; i<n; i++) {
-        printf("%d", recov[i]);
+        printf(" %d", recov[i]);
     }
 
     // 3. Hitung Max Subarray Sum
