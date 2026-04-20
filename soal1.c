@@ -1,3 +1,10 @@
+/** EL2008 Praktikum Pemecahan Masalah dengan Pemrograman
+* Modul               : 2- Data Manipulation and External Files
+* Hari dan Tanggal    : Senin, 20 April 2026
+* Nama (NIM)          : Dzaky Raihan (13224062)
+* Nama File           : soal1.c
+* Deskripsi           : Soal mengenai recovery sinyal dan perbaikan -1
+*/
 #include <stdio.h>
 
 int main() {
