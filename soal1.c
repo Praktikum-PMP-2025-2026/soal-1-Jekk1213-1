@@ -24,54 +24,42 @@ int main() {
         } 
         
         else {
-            int kiri = -1;
-            int kanan = -1;
-            int indexKiri = -1; 
-            int indexKanan = -1;
+            int kiri=-1;
+            int kanan=-1;
+            int masukkiri=0;
+            int masukkanan=0;
 
-            // Cari tetangga kiri
+            //cara tetangga dari kiri
             for (int j=i-1; j>=0; j--) {
                 if (awal[j]!=-1) {
                     kiri=awal[j];
-                    indexKiri=j;
+                    masukkiri=1;
                     break;
                 }
             }
 
-            // Cari tetangga kanan
+            //cari tetangga valid terdekat di kanan
             for (int j=i+1; j<n; j++) {
                 if (awal[j]!=-1) {
                     kanan=awal[j];
-                    indexKanan=j;
+                    masukkanan=1;
                     break;
                 }
             }
-
-
+            
             //logika penggantian -1 dan lain lainnya 
-            if (indexKiri!=-1 && indexKanan!=-1) {
-                //jarak ke kiri dan ke kanan
-                int distKiri=i-indexKiri;
-                int distKanan=indexKanan-i;
-
-                if (distKanan<distKiri) {
-                    //lebih dekat ke kanan, ambil nilai kanan langsung
-                    recov[i]=kanan;
-                } else {
-                    //lebih dekat ke kiri atau tepat di tengah, ambil median
-                    recov[i]=(kiri + kanan)/2;
-                }
+            if (masukkiri && masukkanan) {
+                recov[i]=(kiri+kanan)/2; //mediannya
             } 
-            else if (indexKiri!=-1) {
+            else if (masukkiri) {
                 recov[i]=kiri;
             } 
-            else if (indexKanan!=-1) {
+            else if (masukkanan) {
                 recov[i]=kanan;
             } 
             else {
                 recov[i]=0;
             }
-
         }
     }
 
